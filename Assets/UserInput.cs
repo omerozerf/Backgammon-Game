@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseWorld : MonoBehaviour
+public class UserInput : MonoBehaviour
 {
-    public static MouseWorld Instance;
+    public static UserInput Instance;
     
     
     private Camera mainCamera;

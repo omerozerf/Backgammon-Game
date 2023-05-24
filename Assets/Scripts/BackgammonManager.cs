@@ -5,5 +5,95 @@ using UnityEngine;
 
 public class BackgammonManager : MonoBehaviour
 {
-    
+    [SerializeField] private GameObject[] slotArray;
+
+    [SerializeField] private GameObject whitePrefab;
+    [SerializeField] private GameObject blackPrefab;
+
+
+    private void Start()
+    {
+        Play();
+    }
+
+    private void Play()
+    {
+        Create5();
+        Create3();
+        Create2();
+    }
+
+    private void Create2()
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            float yPos = 1.5f;
+            float zOrder = i * 5;
+
+            // White
+
+            Vector3 slot23Pos = new Vector3(slotArray[23].transform.position.x, yPos,
+                slotArray[23].transform.position.z - zOrder);
+            Instantiate(whitePrefab, slot23Pos, Quaternion.identity);
+
+
+            // Black
+
+            Vector3 slot0Pos = new Vector3(slotArray[0].transform.position.x, yPos,
+                slotArray[0].transform.position.z + zOrder);
+            Instantiate(blackPrefab, slot0Pos, Quaternion.identity);
+        }
+    }
+
+    private void Create3()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            float yPos = 1.5f;
+            float zOrder = i * 5;
+
+            // White
+
+            Vector3 slot7Pos = new Vector3(slotArray[7].transform.position.x, yPos,
+                slotArray[7].transform.position.z + zOrder);
+            Instantiate(whitePrefab, slot7Pos, Quaternion.identity);
+
+
+            // Black
+
+            Vector3 slot16Pos = new Vector3(slotArray[16].transform.position.x, yPos,
+                slotArray[16].transform.position.z - zOrder);
+            Instantiate(blackPrefab, slot16Pos, Quaternion.identity);
+        }
+    }
+
+    private void Create5()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            float yPos = 1.5f;
+            float zOrder = i * 5;
+
+            // White
+
+            Vector3 slot5Pos = new Vector3(slotArray[5].transform.position.x, yPos,
+                slotArray[5].transform.position.z + zOrder);
+            Instantiate(whitePrefab, slot5Pos, Quaternion.identity);
+
+            Vector3 slot12Pos = new Vector3(slotArray[12].transform.position.x, yPos,
+                slotArray[12].transform.position.z - zOrder);
+            Instantiate(whitePrefab, slot12Pos, Quaternion.identity);
+
+
+            // Black
+
+            Vector3 slot18Pos = new Vector3(slotArray[18].transform.position.x, yPos,
+                slotArray[18].transform.position.z - zOrder);
+            Instantiate(blackPrefab, slot18Pos, Quaternion.identity);
+
+            Vector3 slot11Pos = new Vector3(slotArray[11].transform.position.x, yPos,
+                slotArray[11].transform.position.z + zOrder);
+            Instantiate(blackPrefab, slot11Pos, Quaternion.identity);
+        }
+    }
 }
