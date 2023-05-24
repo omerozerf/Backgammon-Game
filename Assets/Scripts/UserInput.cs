@@ -38,19 +38,34 @@ public class UserInput : MonoBehaviour
             {
                 if (hitInfo.collider.CompareTag("Slot"))
                 {
-                    print("Slot = " + hitInfo.collider.gameObject);
+                    Slot();
                 }
 
                 else if (hitInfo.collider.CompareTag("White"))
                 {
-                    print("White = " + hitInfo.collider.gameObject);
+                    White();
                 }
                 
                 else if (hitInfo.collider.CompareTag("Black"))
                 {
-                    print("Black = " + hitInfo.collider.gameObject);
+                    Black();
                 }
             }
         }
+    }
+
+    private void Slot()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void White()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void Black()
+    {
+        throw new NotImplementedException();
     }
 }
