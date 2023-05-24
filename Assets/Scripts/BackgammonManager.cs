@@ -18,15 +18,18 @@ public class BackgammonManager : MonoBehaviour
 
     private void Play()
     {
-        Create5();
-        Create3();
-        Create2();
+        StartCoroutine(Create5());
+        StartCoroutine(Create3());
+        StartCoroutine(Create2());
     }
 
-    private void Create2()
+    private IEnumerator Create2()
     {
         for (int i = 0; i < 2; i++)
         {
+            yield return new WaitForSeconds(0.1f);
+
+            
             float yPos = 1.5f;
             float zOrder = i * 5;
 
@@ -45,10 +48,13 @@ public class BackgammonManager : MonoBehaviour
         }
     }
 
-    private void Create3()
+    private IEnumerator Create3()
     {
         for (int i = 0; i < 3; i++)
         {
+            yield return new WaitForSeconds(0.1f);
+
+            
             float yPos = 1.5f;
             float zOrder = i * 5;
 
@@ -67,10 +73,12 @@ public class BackgammonManager : MonoBehaviour
         }
     }
 
-    private void Create5()
+    private IEnumerator Create5()
     {
         for (int i = 0; i < 5; i++)
         {
+            yield return new WaitForSeconds(0.1f);
+            
             float yPos = 1.5f;
             float zOrder = i * 5;
 

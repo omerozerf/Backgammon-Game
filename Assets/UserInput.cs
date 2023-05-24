@@ -24,10 +24,10 @@ public class UserInput : MonoBehaviour
 
     private void Update()
     {
-        GetSlot();
+        GetMouseClick();
     }
 
-    public GameObject GetSlot()
+    public void GetMouseClick()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -38,12 +38,19 @@ public class UserInput : MonoBehaviour
             {
                 if (hitInfo.collider.CompareTag("Slot"))
                 {
-                    print(hitInfo.collider.gameObject);
-                    return hitInfo.collider.gameObject;
+                    print("Slot = " + hitInfo.collider.gameObject);
+                }
+
+                else if (hitInfo.collider.CompareTag("White"))
+                {
+                    print("White = " + hitInfo.collider.gameObject);
+                }
+                
+                else if (hitInfo.collider.CompareTag("Black"))
+                {
+                    print("Black = " + hitInfo.collider.gameObject);
                 }
             }
         }
-
-        return null;
     }
 }
