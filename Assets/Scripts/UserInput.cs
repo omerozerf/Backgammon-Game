@@ -56,16 +56,16 @@ public class UserInput : MonoBehaviour
 
     private void Slot()
     {
-        throw new NotImplementedException();
+        print("Clicked on Slot");
     }
 
     private void White()
     {
-        throw new NotImplementedException();
+        print("Clicked on White");
     }
 
     private void Black()
     {
-        throw new NotImplementedException();
+        print("Clicked on Black");
     }
 }
