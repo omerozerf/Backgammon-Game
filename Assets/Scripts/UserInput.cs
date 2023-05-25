@@ -7,6 +7,8 @@ public class UserInput : MonoBehaviour
 {
     public static UserInput Instance;
     
+    public Slot slot;
+    public Stone stone;
     
     private Camera mainCamera;
 
@@ -38,34 +40,53 @@ public class UserInput : MonoBehaviour
             {
                 if (hitInfo.collider.CompareTag("Slot"))
                 {
-                    Slot();
+                    Slot(hitInfo.transform.GetComponent<Slot>());
                 }
 
                 else if (hitInfo.collider.CompareTag("White"))
                 {
-                    White();
+                    White(hitInfo.transform.GetComponent<Stone>());
                 }
                 
                 else if (hitInfo.collider.CompareTag("Black"))
                 {
-                    Black();
+                    Black(hitInfo.transform.GetComponent<Stone>());
                 }
             }
         }
     }
 
-    private void Slot()
+    private void Slot(Slot slot)
     {
         print("Clicked on Slot");
+
+        this.slot = slot;
+        
+        Stack(slot, this.stone);
     }
 
-    private void White()
+    private void White(Stone stone)
     {
         print("Clicked on White");
+
+        this.stone = stone;
     }
 
-    private void Black()
+    private void Black(Stone stone)
     {
         print("Clicked on Black");
+        
+        this.stone = stone;
+    }
+
+
+    private void Stack(Slot slot, Stone stone)
+    {
+        print("Stack");
+        
+        this.stone.transform.parent = slot.transform;
+        Vector3 lastIndexPos = slot.GetStoneList()[^1].transform.position;
+        stone.transform.position = new Vector3(lastIndexPos.x, lastIndexPos.y, lastIndexPos.z + 5);
+        this.slot.AddStoneToList(this.stone);
     }
 }

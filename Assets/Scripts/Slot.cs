@@ -11,4 +11,10 @@ public class Slot : MonoBehaviour
     {
         stoneList.Add(stone);
     }
+
+
+    public List<Stone> GetStoneList()
+    {
+        return stoneList;
+    }
 }
