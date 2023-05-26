@@ -78,7 +78,7 @@ public class UserInput : MonoBehaviour
         
         this.stone = stone;
     }
-
+ 
 
     private void Stack(Slot slot, Stone stone)
     {
