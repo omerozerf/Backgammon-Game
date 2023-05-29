@@ -9,7 +9,7 @@ public class Slot : MonoBehaviour
 
     public void AddStoneToList(Stone stone)
     {
-        stoneList.Add(stone);
+        stoneList.Add(stone); 
     }
 
 
