@@ -85,8 +85,15 @@ public class UserInput : MonoBehaviour
         print("Stack");
         
         this.stone.transform.parent = slot.transform;
-        Vector3 lastIndexPos = slot.GetStoneList()[^1].transform.position;
-        stone.transform.position = new Vector3(lastIndexPos.x, lastIndexPos.y, lastIndexPos.z + 5);
+        if (slot.GetStoneList().Count == 0)
+        {
+            stone.transform.position = slot.transform.position;
+        }
+        else
+        {
+            Vector3 lastIndexPos = slot.GetStoneList()[^1].transform.position;
+            stone.transform.position = new Vector3(lastIndexPos.x, lastIndexPos.y, lastIndexPos.z + 5);
+        }
         this.slot.AddStoneToList(this.stone);
     }
 }
