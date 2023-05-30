@@ -92,7 +92,14 @@ public class UserInput : MonoBehaviour
         else
         {
             Vector3 lastIndexPos = slot.GetStoneList()[^1].transform.position;
-            stone.transform.position = new Vector3(lastIndexPos.x, lastIndexPos.y, lastIndexPos.z + 5);
+            if (lastIndexPos.z > 0)
+            {
+                stone.transform.position = new Vector3(lastIndexPos.x, lastIndexPos.y, lastIndexPos.z - 5);
+            }
+            else
+            {
+                stone.transform.position = new Vector3(lastIndexPos.x, lastIndexPos.y, lastIndexPos.z + 5);
+            }
         }
         this.slot.AddStoneToList(this.stone);
     }
