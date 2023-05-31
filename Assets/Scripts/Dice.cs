@@ -8,7 +8,7 @@ public class Dice : MonoBehaviour
 {
     private void Update()
     {
-        GetRandomNumber();
+        GetRandomNumber(); 
     }
 
     private static int GetRandomNumber()
