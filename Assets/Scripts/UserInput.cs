@@ -76,7 +76,7 @@ public class UserInput : MonoBehaviour
     {
         print("Clicked on Black");
         
-        this.stone = stone;
+        this.stone = stone; 
     }
  
 
