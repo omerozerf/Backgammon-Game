@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+namespace Scripts
+{
+    
 public class Dice : MonoBehaviour
 {
     private void Update()
@@ -22,4 +25,5 @@ public class Dice : MonoBehaviour
 
         return 0;
     }
+}
 }
