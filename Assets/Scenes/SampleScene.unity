@@ -3134,8 +3134,8 @@ MonoBehaviour:
   eatenOrigin: []
   whichDie: 
   pieces:
-  - {fileID: 1875693535466266, guid: 88d7fd20f68c8e24ca32dbb38545ca67, type: 3}
-  - {fileID: 1408234255475750, guid: 9d9ed4a8e343d7342ad27dbd6c796a33, type: 3}
+  - {fileID: 3060107871572962304, guid: 2dda8c3d9113e4b409af645c1a5dbea8, type: 3}
+  - {fileID: 8603259666035835736, guid: e5247d58a989cc143ab92a990570f565, type: 3}
   rollButton: {fileID: 334055445}
   undoButton: {fileID: 1150237405}
   doneButton: {fileID: 1205988265}

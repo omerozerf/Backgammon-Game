@@ -70,7 +70,7 @@ public class gameManager : MonoBehaviour
         {
             for (int j = 0; j < startPositions[i]; j++)
             {
-                tiles[i].addPiece(Instantiate(pieces[startColors[i]], new Vector3(0, 0, 0), Quaternion.identity).GetComponent<Piece>());
+                tiles[i].addPiece(Instantiate(pieces[startColors[i]], new Vector3(0, 0, 0), Quaternion.Euler(-90, 0, 0)).GetComponent<Piece>());
             }
         }
         player = Random.Range(-1, 1);
