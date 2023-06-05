@@ -5,7 +5,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class Dice : MonoBehaviour
-{
+{ 
     private void Update()
     {
         GetRandomNumber(); 
