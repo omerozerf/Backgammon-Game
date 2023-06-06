@@ -8,7 +8,7 @@ namespace Scripts
 {
     
 public class Dice : MonoBehaviour
-{
+{ 
     private void Update()
     {
         GetRandomNumber(); 
