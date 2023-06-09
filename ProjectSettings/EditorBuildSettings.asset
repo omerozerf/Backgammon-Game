@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Tavla.unity
+    guid: 4dd979aac6422b04ebbdc78f1ddaed83
   m_configObjects: {}
