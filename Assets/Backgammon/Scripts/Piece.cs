@@ -6,7 +6,7 @@ public class Piece : MonoBehaviour {
     public int color;
 	// Use this for initialization
 	void Start () {
-		
+		 
 	}
 	
 	// Update is called once per frame
