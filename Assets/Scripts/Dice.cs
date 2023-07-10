@@ -5,7 +5,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace Scripts
-{
+{ 
     
 public class Dice : MonoBehaviour
 { 
